@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply bg-bg;
+    }
+
+    body {
+        @apply bg-bg font-league-spartan;
+    }
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Alexandria", sans-serif;
+}
+
+@layer components {
+    .video-player-container {
+        @apply w-full max-w-7xl mx-auto;
+    }
+
+    .video-player {
+        @apply relative pt-[56.25%] bg-black rounded-lg overflow-hidden;
+    }
+
+    .video-player>div {
+        @apply absolute top-0 left-0 w-full h-full;
+    }
+
+    .video-list {
+        @apply mt-8;
+    }
+
+    .video-item {
+        @apply transition-all duration-300 border-l-[3px] border-l-gray-200 border-transparent;
+    }
+
+    .video-item:hover {
+        @apply bg-black/5;
+    }
+
+    .video-item.active {
+        @apply !border-l-successbgbtn bg-black/5;
+    }
+
+    .video-error {
+        @apply absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black/70 text-white text-center p-5 rounded-lg;
+    }
+
+    .video-error p {
+        @apply text-lg m-0;
+    }
+
+    .video-loading {
+        @apply absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black/50 z-10;
+    }
+}
